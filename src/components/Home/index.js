@@ -7,16 +7,22 @@ export const Container = styled.div`
   margin: 0 auto;
 `
 
-const Title = styled.h1`
-  color: palevioletred;
+const Name = styled.h1`
+  color: rgba(70, 113, 122, 1);
+  text-align: center;
 `
-
+const LastNm = styled.span`
+  color: rgba(70, 113, 122, .75)
+`
 
 class Home extends Component {
   render() {
     return(
       <Container>
-        <Title>hello home</Title>
+        <Name>
+          annie
+          <LastNm>bae</LastNm>
+        </Name>
       </Container>
     )
   }

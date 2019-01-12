@@ -5,29 +5,31 @@ import { FaHome, FaUserCircle, FaHandPeace } from 'react-icons/fa';
 import { Container } from '../Home'
 
 const Menu = styled.ul`
-  color: palevioletred;
   list-style-type: none;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em auto;
   padding: 0;
-  text-align: center;
 `
 
-const listItem = styled.li`
+const ListItem = styled.li`
   display: inline-block;
-  margin: 0 1em;
 `
+
 
 const Header = () => (
   <Container>
     <Menu>
-      <listItem>
-        <Link to="/"><FaHome /></Link>
-      </listItem>
-      <listItem>
-        <Link to="/about"><FaUserCircle /></Link>
-      </listItem>
-      <listItem>
-        <Link to="/contact"><FaHandPeace /></Link>
-      </listItem>
+      <ListItem>
+        <Link to="/"><FaHome size={15} color='#537757' /></Link>
+      </ListItem>
+      <ListItem>
+        <Link to="/about"><FaUserCircle size={15} color='#537757' /></Link>
+      </ListItem>
+      <ListItem>
+        <Link to="/contact"><FaHandPeace size={15} color='#537757' /></Link>
+      </ListItem>
     </Menu>
   </Container>
   

@@ -1,5 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Container } from '../Home'
 
-const Contact = () => <h2>Contact lllll</h2>
+
+class Contact extends Component {
+  render() {
+    return (
+      <Container>
+        <h1>Contact!</h1>
+      </Container>
+    )
+  }
+}
 
 export default Contact;

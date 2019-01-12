@@ -1,5 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Container } from '../Home'
 
-const About = () => <h2>About this page</h2>;
+
+class About extends Component {
+  render() {
+    return(
+      <Container>
+        <h2>About this page</h2>
+      </Container>
+    )
+  }
+}
 
 export default About;
