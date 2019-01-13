@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-
+import styled, { keyframes } from 'styled-components';
+import PageTitle from '../PageTitle'
 
 export const Container = styled.div`
   max-width: 1024px;
@@ -9,20 +9,28 @@ export const Container = styled.div`
 
 const Name = styled.h1`
   color: rgba(70, 113, 122, 1);
-  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 const LastNm = styled.span`
   color: rgba(70, 113, 122, .75)
 `
 
+
 class Home extends Component {
   render() {
     return(
       <Container>
+        <PageTitle title="home" />
         <Name>
-          annie
-          <LastNm>bae</LastNm>
+          lorem
+          <LastNm>ipsum</LastNm>.
         </Name>
+
+   
+
       </Container>
     )
   }

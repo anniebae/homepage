@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
-import { FaHome, FaUserCircle, FaHandPeace } from 'react-icons/fa';
+import { FaHome, FaUserCircle, FaDesktop, FaHandPeace } from 'react-icons/fa';
 import { Container } from '../Home'
 
 const Menu = styled.ul`
@@ -26,6 +26,9 @@ const Header = () => (
       </ListItem>
       <ListItem>
         <Link to="/about"><FaUserCircle size={15} color='#537757' /></Link>
+      </ListItem>
+      <ListItem>
+        <Link to="/work"><FaDesktop size={15} color='#537757' /></Link>
       </ListItem>
       <ListItem>
         <Link to="/contact"><FaHandPeace size={15} color='#537757' /></Link>
