@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import { Animated } from "react-animated-css";
 import PageTitle from '../PageTitle'
-import {Animated} from "react-animated-css";
 
 
 export const Container = styled.div`
@@ -16,7 +16,7 @@ const Name = styled.h1`
   left: 50%;
   transform: translate(-50%, -50%);
 `
-const LastNm = styled.span`
+const LastName = styled.span`
   color: rgba(70, 113, 122, .75)
 `
 
@@ -28,13 +28,12 @@ class Home extends Component {
   render() {
     return(
       <Container>
-       
         <PageTitle title="home" />
 
         <Name>
           <Animated animationIn="fadeInDown" animationOut="fadeOut" isVisible={true}>
               lorem
-              <LastNm>ipsum</LastNm>.
+              <LastName>ipsum</LastName>.
           </Animated>
         </Name>
 

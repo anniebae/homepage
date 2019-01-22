@@ -30,7 +30,19 @@ const Row = styled.div`
 `
 
 
-const ColumnBold = styled.p`
+const Column = styled.div`
+`
+
+const ColH1Title = styled.h1`
+  font-weight: 600;
+  font-size: 18px;
+`
+
+const ColTitle = styled.p`
+  font-weight: 600;
+`
+const ColItem = styled.p`
+  font-size: 14px;
 `
 
 class Work extends Component {
@@ -42,9 +54,31 @@ class Work extends Component {
           <BannerText>oy vey</BannerText>
         </Banner>
         <Row>
-          <ColumnBold>Technologies</ColumnBold>
-          <ColumnBold>Languages</ColumnBold>
-          <ColumnBold>Libraries</ColumnBold>
+          <Column>
+            <ColH1Title>Technologies</ColH1Title>
+          </Column>
+
+          <Column>
+            <ColTitle>Languages</ColTitle>
+            <ColItem>Sass / LESS</ColItem>
+            <ColItem>HTML5 / CSS3</ColItem>
+            <ColItem>JavaScript / jQuery</ColItem>
+            <ColItem>Photoshop / Zeplin</ColItem>
+            <ColItem>Version Control (GIT)</ColItem>
+            <ColItem>Bootstrap</ColItem>
+            <ColItem>Responsive Web Design</ColItem>
+            <ColItem>Cross-Browser Testing</ColItem>
+            <ColItem>Mobile First Build</ColItem>
+          </Column>
+
+          <Column>
+            <ColTitle>Libraries</ColTitle>
+            <ColItem>AJAX</ColItem>
+            <ColItem>Node.js</ColItem>
+            <ColItem>React.js</ColItem>
+            <ColItem>Backbone.js</ColItem>
+          </Column>
+
         </Row>
       </Container>
     )

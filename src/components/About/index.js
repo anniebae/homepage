@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Animated } from "react-animated-css";
 import { Container } from '../Home'
 import PageTitle from '../PageTitle'
 import AboutBackground from '../../images/bnw.png';
@@ -28,7 +29,8 @@ const Main = styled.div`
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%)
+  transform: translate(-50%,-50%);
+  padding: 1em 2em;
 `
 
 const Copy = styled.p`
@@ -42,11 +44,16 @@ class About extends Component {
       <Container>
         <Background></Background>
         <PageTitle title="about" />
-
+      
         <Main>
-          <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
-          <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
-          <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
+
+          <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+            <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
+            <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
+            <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
+          </Animated>
+
+
         </Main>
       </Container>
     )

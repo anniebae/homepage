@@ -24,7 +24,7 @@ class Contact extends Component {
       <Container>
         <PageTitle title="contact" />
         <Banner>
-          <BannerText>Contact</BannerText>
+          <BannerText>contact</BannerText>
         </Banner>
       </Container>
     )
