@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
+import { FaAsterisk } from 'react-icons/fa';
 import { Container } from '../Home'
 import PageTitle from '../PageTitle'
+
 import WorkBackground from '../../images/IMG_2390.JPG';
- 
+
+
 const Banner = styled.div`
   background-image: url(${WorkBackground});
   height: 300px;
@@ -40,6 +43,7 @@ const ColH1Title = styled.h1`
 
 const ColTitle = styled.p`
   font-weight: 600;
+  text-transform: uppercase;
 `
 const ColItem = styled.p`
   font-size: 14px;
