@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 import PageTitle from '../PageTitle'
+import {Animated} from "react-animated-css";
+
 
 export const Container = styled.div`
   max-width: 1024px;
@@ -19,14 +21,21 @@ const LastNm = styled.span`
 `
 
 
+ 
+
+
 class Home extends Component {
   render() {
     return(
       <Container>
+       
         <PageTitle title="home" />
+
         <Name>
-          lorem
-          <LastNm>ipsum</LastNm>.
+          <Animated animationIn="fadeInDown" animationOut="fadeOut" isVisible={true}>
+              lorem
+              <LastNm>ipsum</LastNm>.
+          </Animated>
         </Name>
 
    

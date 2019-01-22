@@ -20,6 +20,21 @@ const Background = styled.div`
   opacity: .3;
 `
 
+const Main = styled.div`
+  background: rgba(83,119,87,.2);
+  border-radius: 4px;
+  max-width: 550px;
+  font-size: 14px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
+`
+
+const Copy = styled.p`
+
+`
+
 
 class About extends Component {
   render() {
@@ -27,6 +42,12 @@ class About extends Component {
       <Container>
         <Background></Background>
         <PageTitle title="about" />
+
+        <Main>
+          <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
+          <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
+          <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
+        </Main>
       </Container>
     )
   }

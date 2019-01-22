@@ -15,6 +15,10 @@ const Menu = styled.ul`
 
 const ListItem = styled.li`
   display: inline-block;
+
+  &:hover {
+    opacity: .4;
+  }
 `
 
 
