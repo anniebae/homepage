@@ -27,11 +27,16 @@ export const BannerText = styled.h1`
   left: 50%;
   transform: translate(-50%, -50%);
 `
+
+const BodyContainer = styled.div`
+  max-width: 1024px;
+  margin: 0 auto;
+`
+
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
 `
-
 
 const Column = styled.div`
 `
@@ -57,33 +62,36 @@ class Work extends Component {
         <Banner>
           <BannerText>oy vey</BannerText>
         </Banner>
-        <Row>
-          <Column>
-            <ColH1Title>Technologies</ColH1Title>
-          </Column>
 
-          <Column>
-            <ColTitle>Languages</ColTitle>
-            <ColItem>Sass / LESS</ColItem>
-            <ColItem>HTML5 / CSS3</ColItem>
-            <ColItem>JavaScript / jQuery</ColItem>
-            <ColItem>Photoshop / Zeplin</ColItem>
-            <ColItem>Version Control (GIT)</ColItem>
-            <ColItem>Bootstrap</ColItem>
-            <ColItem>Responsive Web Design</ColItem>
-            <ColItem>Cross-Browser Testing</ColItem>
-            <ColItem>Mobile First Build</ColItem>
-          </Column>
+        <BodyContainer>
+          <Row>
+            <Column>
+              <ColH1Title>Technologies</ColH1Title>
+            </Column>
 
-          <Column>
-            <ColTitle>Libraries</ColTitle>
-            <ColItem>AJAX</ColItem>
-            <ColItem>Node.js</ColItem>
-            <ColItem>React.js</ColItem>
-            <ColItem>Backbone.js</ColItem>
-          </Column>
+            <Column>
+              <ColTitle>I know</ColTitle>
+              <ColItem>Sass / LESS</ColItem>
+              <ColItem>HTML5 / CSS3</ColItem>
+              <ColItem>JavaScript / jQuery</ColItem>
+              <ColItem>Photoshop / Zeplin</ColItem>
+              <ColItem>Version Control (GIT)</ColItem>
+              <ColItem>Bootstrap</ColItem>
+              <ColItem>Responsive Web Design</ColItem>
+              <ColItem>Cross-Browser Testing</ColItem>
+              <ColItem>Mobile First Build</ColItem>
+            </Column>
 
-        </Row>
+            <Column>
+              <ColTitle>I use</ColTitle>
+              <ColItem>AJAX</ColItem>
+              <ColItem>Node.js</ColItem>
+              <ColItem>React.js</ColItem>
+              <ColItem>Backbone.js</ColItem>
+            </Column>
+
+          </Row>
+        </BodyContainer>
       </Container>
     )
   }
