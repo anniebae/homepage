@@ -6,8 +6,6 @@ import PageTitle from '../PageTitle'
 
 
 export const Container = styled.div`
-  // max-width: 1024px;
-  // margin: 0 auto;
 `
 
 const Name = styled.h1`
@@ -22,14 +20,11 @@ const LastName = styled.span`
 `
 
 
-
 class Home extends Component {
   render() {
     return(
       <Container>
         <PageTitle title="home" />
-        
-
         <Link to="/about">
           <Name>
             <Animated animationIn="fadeInDown" animationOut="fadeOut" isVisible={true}>

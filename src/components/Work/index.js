@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
-import { FaAsterisk } from 'react-icons/fa';
+import { FaArrowDown, FaGithub } from 'react-icons/fa';
 import { Container } from '../Home'
 import PageTitle from '../PageTitle'
 
@@ -26,16 +27,20 @@ export const BannerText = styled.h1`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  letter-spacing: .2em;
 `
 
 const BodyContainer = styled.div`
   max-width: 1024px;
   margin: 0 auto;
+  width: 75%;
 `
 
 const Row = styled.div`
-  display: flex;
-  justify-content: space-between;
+  @media (min-width: 767px) {
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
 const Column = styled.div`
@@ -49,18 +54,51 @@ const ColH1Title = styled.h1`
 const ColTitle = styled.p`
   font-weight: 600;
   text-transform: uppercase;
+  cursor: pointer;
 `
 const ColItem = styled.p`
   font-size: 14px;
+  display: none;
+
+  &.showItem {
+    display: block;
+  }
+
+  @media (min-width: 767px) {
+    display: block;
+  }
+`
+const GithubDiv = styled.div`
 `
 
 class Work extends Component {
+  constructor(props) {
+    super(props);
+    this.showKnowList = this.showKnowList.bind(this)
+    this.showUseList = this.showUseList.bind(this)
+
+    this.state = {
+      knowList: false,
+      useList: false
+    }
+  }
+  showKnowList() {
+    this.setState({
+      knowList: true
+    });
+  }
+
+  showUseList() {
+    this.setState({
+      useList: true
+    });
+  }
   render() {
     return(
       <Container>
         <PageTitle title="work" />
         <Banner>
-          <BannerText>oy vey</BannerText>
+          <BannerText>work</BannerText>
         </Banner>
 
         <BodyContainer>
@@ -70,27 +108,33 @@ class Work extends Component {
             </Column>
 
             <Column>
-              <ColTitle>I know</ColTitle>
-              <ColItem>Sass / LESS</ColItem>
-              <ColItem>HTML5 / CSS3</ColItem>
-              <ColItem>JavaScript / jQuery</ColItem>
-              <ColItem>Photoshop / Zeplin</ColItem>
-              <ColItem>Version Control (GIT)</ColItem>
-              <ColItem>Bootstrap</ColItem>
-              <ColItem>Responsive Web Design</ColItem>
-              <ColItem>Cross-Browser Testing</ColItem>
-              <ColItem>Mobile First Build</ColItem>
+              <ColTitle onClick={this.showKnowList}>I know <FaArrowDown size={12} color='#537757' /></ColTitle>
+              <ColItem className={this.state.knowList ? 'showItem' : ''}>Sass / LESS</ColItem>
+              <ColItem className={this.state.knowList ? 'showItem' : ''}>HTML5 / CSS3</ColItem>
+              <ColItem className={this.state.knowList ? 'showItem' : ''}>JavaScript / jQuery</ColItem>
+              <ColItem className={this.state.knowList ? 'showItem' : ''}>Photoshop / Zeplin</ColItem>
+              <ColItem className={this.state.knowList ? 'showItem' : ''}>Version Control (GIT)</ColItem>
+              <ColItem className={this.state.knowList ? 'showItem' : ''}>Bootstrap</ColItem>
+              <ColItem className={this.state.knowList ? 'showItem' : ''}>Responsive Web Design</ColItem>
+              <ColItem className={this.state.knowList ? 'showItem' : ''}>Cross-Browser Testing</ColItem>
+              <ColItem className={this.state.knowList ? 'showItem' : ''}>Mobile First Build</ColItem>
             </Column>
 
             <Column>
-              <ColTitle>I use</ColTitle>
-              <ColItem>AJAX</ColItem>
-              <ColItem>Node.js</ColItem>
-              <ColItem>React.js</ColItem>
-              <ColItem>Backbone.js</ColItem>
+              <ColTitle onClick={this.showUseList}>I use <FaArrowDown size={12} color='#537757' /></ColTitle>
+              <ColItem className={this.state.useList ? 'showItem' : ''}>AJAX</ColItem>
+              <ColItem className={this.state.useList ? 'showItem' : ''}>Node.js</ColItem>
+              <ColItem className={this.state.useList ? 'showItem' : ''}>React.js</ColItem>
+              <ColItem className={this.state.useList ? 'showItem' : ''}>Backbone.js</ColItem>
             </Column>
 
           </Row>
+
+          <GithubDiv>
+            <a href="https://github.com/anniebae" target="_blank">
+              <FaGithub />
+            </a>
+          </GithubDiv>
         </BodyContainer>
       </Container>
     )
