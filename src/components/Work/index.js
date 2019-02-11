@@ -176,14 +176,24 @@ class Work extends Component {
             </ListGroup>
           </Row>
 
+          <Row>
+            <TitleGroup>
+              <ColH1Title>Code</ColH1Title>
+            </TitleGroup>
+
+            <ListGroup>
+              <GithubDiv>
+                <a href="https://github.com/anniebae" target="_blank">
+                  <FaGithub />
+                </a>
+              </GithubDiv>
+            </ListGroup>
+          </Row>
 
 
 
-          <GithubDiv>
-            <a href="https://github.com/anniebae" target="_blank">
-              <FaGithub />
-            </a>
-          </GithubDiv>
+
+          
         </BodyContainer>
       </Container>
     )
