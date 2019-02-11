@@ -28,8 +28,8 @@ class Home extends Component {
         <Link to="/about">
           <Name>
             <Animated animationIn="fadeInDown" animationOut="fadeOut" isVisible={true}>
-                lorem
-                <LastName>ipsum</LastName>.
+                annie
+                <LastName>bae</LastName>.
             </Animated>
           </Name>
         </Link>

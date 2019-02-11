@@ -14,6 +14,7 @@ const Banner = styled.div`
   background-size: cover;
   background-position: center;
   position: relative;
+  margin: 5em 0 3em;
 
   &:hover {
     opacity: .7;
@@ -37,21 +38,34 @@ const BodyContainer = styled.div`
 `
 
 const Row = styled.div`
+  margin: 0 0 3em;
+  
   @media (min-width: 767px) {
     display: flex;
-    justify-content: space-between;
+  }
+`
+
+const TitleGroup = styled.div`
+  width: 33.333%;
+`
+const ListGroup = styled.div`
+  width: 66.667%;
+  @media (min-width: 767px) {
+    display: flex;
   }
 `
 
 const Column = styled.div`
+  width: 50%;
 `
 
 const ColH1Title = styled.h1`
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 2px;
 `
 
-const ColTitle = styled.p`
+const BoldTitle = styled.p`
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
@@ -68,8 +82,19 @@ const ColItem = styled.p`
     display: block;
   }
 `
+
+const TypeBold = styled.p`
+  font-weight: 600;
+`
+
+const EduDesc = styled.p`
+  font-weight: 300;
+  font-size: 14px;
+`
+
 const GithubDiv = styled.div`
 `
+
 
 class Work extends Component {
   constructor(props) {
@@ -103,32 +128,56 @@ class Work extends Component {
 
         <BodyContainer>
           <Row>
-            <Column>
+            <TitleGroup>
               <ColH1Title>Technologies</ColH1Title>
-            </Column>
+            </TitleGroup>
+            
+            <ListGroup>
+              <Column>
+                <BoldTitle onClick={this.showKnowList}>I know <FaArrowDown size={12} color='#537757' /></BoldTitle>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>Sass / LESS</ColItem>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>HTML5 / CSS3</ColItem>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>JavaScript / jQuery</ColItem>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>Photoshop / Zeplin</ColItem>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>Version Control (GIT)</ColItem>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>Bootstrap</ColItem>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>Responsive Web Design</ColItem>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>Cross-Browser Testing</ColItem>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>Mobile First Build</ColItem>
+              </Column>
 
-            <Column>
-              <ColTitle onClick={this.showKnowList}>I know <FaArrowDown size={12} color='#537757' /></ColTitle>
-              <ColItem className={this.state.knowList ? 'showItem' : ''}>Sass / LESS</ColItem>
-              <ColItem className={this.state.knowList ? 'showItem' : ''}>HTML5 / CSS3</ColItem>
-              <ColItem className={this.state.knowList ? 'showItem' : ''}>JavaScript / jQuery</ColItem>
-              <ColItem className={this.state.knowList ? 'showItem' : ''}>Photoshop / Zeplin</ColItem>
-              <ColItem className={this.state.knowList ? 'showItem' : ''}>Version Control (GIT)</ColItem>
-              <ColItem className={this.state.knowList ? 'showItem' : ''}>Bootstrap</ColItem>
-              <ColItem className={this.state.knowList ? 'showItem' : ''}>Responsive Web Design</ColItem>
-              <ColItem className={this.state.knowList ? 'showItem' : ''}>Cross-Browser Testing</ColItem>
-              <ColItem className={this.state.knowList ? 'showItem' : ''}>Mobile First Build</ColItem>
-            </Column>
-
-            <Column>
-              <ColTitle onClick={this.showUseList}>I use <FaArrowDown size={12} color='#537757' /></ColTitle>
-              <ColItem className={this.state.useList ? 'showItem' : ''}>AJAX</ColItem>
-              <ColItem className={this.state.useList ? 'showItem' : ''}>Node.js</ColItem>
-              <ColItem className={this.state.useList ? 'showItem' : ''}>React.js</ColItem>
-              <ColItem className={this.state.useList ? 'showItem' : ''}>Backbone.js</ColItem>
-            </Column>
-
+              <Column>
+                <BoldTitle onClick={this.showUseList}>I use <FaArrowDown size={12} color='#537757' /></BoldTitle>
+                <ColItem className={this.state.useList ? 'showItem' : ''}>AJAX</ColItem>
+                <ColItem className={this.state.useList ? 'showItem' : ''}>Node.js</ColItem>
+                <ColItem className={this.state.useList ? 'showItem' : ''}>React.js</ColItem>
+                <ColItem className={this.state.useList ? 'showItem' : ''}>Backbone.js</ColItem>
+              </Column>
+            </ListGroup>
           </Row>
+
+          <Row>
+            <TitleGroup>
+              <ColH1Title>Education</ColH1Title>
+            </TitleGroup>
+            
+            <ListGroup>
+              <Column>
+                <ColItem>General Assembly</ColItem>
+                <ColItem>Cardiff University</ColItem>
+                <ColItem>Rutgers University</ColItem>
+              </Column>
+
+              <Column>
+                <ColItem>2014-2015</ColItem>
+                <ColItem>2013</ColItem>
+                <ColItem>2010-2014</ColItem>
+              </Column>
+            </ListGroup>
+          </Row>
+
+
+
 
           <GithubDiv>
             <a href="https://github.com/anniebae" target="_blank">

@@ -8,6 +8,7 @@ import ContactBackground from '../../images/IMG_2392.JPG';
 
 
 const Banner = styled.div`
+  margin: 5em 0 3em;
   background-image: url(${ContactBackground});
   height: 300px;
   background-size: cover;
