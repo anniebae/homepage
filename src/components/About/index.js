@@ -22,19 +22,31 @@ const Background = styled.div`
 `
 
 const Main = styled.div`
-  background: rgba(83,119,87,.2);
+  background: rgba(83,119,87,.15);
   border-radius: 4px;
   max-width: 550px;
   font-size: 14px;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  padding: 1em 2em;
+  padding: 1.5em;
+  bottom: 1.5em;
+  margin: 0 1.5em;
+
+  @media (min-width: 767px) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    height: fit-content;
+  }
 `
 
 const Copy = styled.p`
+  margin: 0;
+`
 
+const Link = styled.a`
+  text-decoration: none;
+  color: #537757;
 `
 
 
@@ -46,11 +58,15 @@ class About extends Component {
         <PageTitle title="about" />
       
         <Main>
-
           <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-            <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
-            <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
-            <Copy>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro minima quasi illo facilis eaque ab nam repellendus, deleniti placeat inventore explicabo numquam unde itaque quidem deserunt sunt eius laboriosam eveniet.</Copy>
+            <Copy>👋, I'm Annie - </Copy>
+            <Copy>a New York City based engineer currently 💻 at <Link href="https://www.stashinvest.com/" target="_blank">Stash Invest</Link>.</Copy>
+            <Copy>I 🏃 6 half marathons, 1 Ragnar Relay, and don't plan on stopping any time soon.</Copy>
+            <Copy>In my free ⏰, I like to explore cool new ways to 🔨 sites & apps, take 📸, and drink an unruly amount of ☕️.</Copy>
+            <Copy>Most importantly, I'm on a mission to make my 🐱 #instafamous so go give <Link href="https://www.instagram.com/sunnystillsleeping/" target="_blank">Sunny</Link> a follow.
+            </Copy>
+            <br/>
+            <Copy>Cheers, 👧</Copy>
           </Animated>
 
 

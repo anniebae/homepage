@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { FaEnvelope, FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
+// import { FaEnvelope, FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { Container } from '../Home'
 import { BannerText } from '../Work'
 import PageTitle from '../PageTitle'
@@ -28,8 +28,14 @@ const ContactBody = styled.ul`
   margin: auto;
 `
 
+
 const ContactItem = styled.li`
   margin: .5em 0;
+`
+
+const Link = styled.a`
+  text-decoration: none;
+  color: #537757;
 `
 
 class Contact extends Component {
@@ -42,18 +48,18 @@ class Contact extends Component {
         </Banner>
 
         <ContactBody>
-          <a href="mailto:bae.annie@gmail.com?subject=Hi Annie!&body=Sent from anniebae.com">
-            <ContactItem><FaEnvelope size={12} color='#537757' /> email</ContactItem>
-          </a>
-          <a href="https://www.linkedin.com/in/anniebae/" target="_blank">
-            <ContactItem><FaLinkedinIn size={12} color='#537757' /> linkedin</ContactItem>
-          </a>
-          <a href="https://www.instagram.com/anniebae/" target="_blank">
-            <ContactItem><FaInstagram size={12} color='#537757' /> instagram</ContactItem>
-          </a>
-          <a href="https://twitter.com/bae_annie" target="_blank">
-            <ContactItem><FaTwitter size={12} color='#537757' /> twitter</ContactItem>
-          </a>
+          <Link href="mailto:bae.annie@gmail.com?subject=Hi Annie!&body=Sent from anniebae.com">
+            <ContactItem>email</ContactItem>
+          </Link>
+          <Link href="https://www.linkedin.com/in/anniebae/" target="_blank">
+            <ContactItem>linkedin</ContactItem>
+          </Link>
+          <Link href="https://www.instagram.com/anniebae/" target="_blank">
+            <ContactItem>instagram</ContactItem>
+          </Link>
+          <Link href="https://twitter.com/bae_annie" target="_blank">
+            <ContactItem>twitter</ContactItem>
+          </Link>
             
         </ContactBody>
       </Container>

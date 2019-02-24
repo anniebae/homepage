@@ -46,29 +46,55 @@ const Row = styled.div`
 `
 
 const TitleGroup = styled.div`
-  width: 33.333%;
+  margin: 0 0 1.5em;
+  @media (min-width: 767px) {
+    width: 33.333%;
+    margin: 0;
+  }
 `
 const ListGroup = styled.div`
   width: 66.667%;
   @media (min-width: 767px) {
     display: flex;
+
+    &.mobile { display: none; }
   }
 `
 
+const MobileGroup = styled.div`
+  margin: 0 0 1.5em;
+`
+const MobileName = styled.p`
+  margin: 0 0 .3em;
+`
+const MobileSpan = styled.span`
+  display: block;
+  opacity: 0.5;
+  font-size: .8em;
+`
+
 const Column = styled.div`
-  width: 50%;
+  @media (min-width: 767px) {
+    width: 50%;
+  }
 `
 
 const ColH1Title = styled.h1`
   font-weight: 300;
   font-size: 24px;
   letter-spacing: 2px;
+  color: #537757;
 `
 
 const BoldTitle = styled.p`
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
+
+  
+  @media (min-width: 767px) {
+    
+  }
 `
 const ColItem = styled.p`
   font-size: 14px;
@@ -93,6 +119,12 @@ const EduDesc = styled.p`
 `
 
 const GithubDiv = styled.div`
+  position: relative;
+  top: 25%;
+
+  &:hover {
+    opacity: .4;
+  }
 `
 
 
@@ -140,10 +172,11 @@ class Work extends Component {
                 <ColItem className={this.state.knowList ? 'showItem' : ''}>JavaScript / jQuery</ColItem>
                 <ColItem className={this.state.knowList ? 'showItem' : ''}>Photoshop / Zeplin</ColItem>
                 <ColItem className={this.state.knowList ? 'showItem' : ''}>Version Control (GIT)</ColItem>
-                <ColItem className={this.state.knowList ? 'showItem' : ''}>Bootstrap</ColItem>
                 <ColItem className={this.state.knowList ? 'showItem' : ''}>Responsive Web Design</ColItem>
                 <ColItem className={this.state.knowList ? 'showItem' : ''}>Cross-Browser Testing</ColItem>
                 <ColItem className={this.state.knowList ? 'showItem' : ''}>Mobile First Build</ColItem>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>Active Admin</ColItem>
+                <ColItem className={this.state.knowList ? 'showItem' : ''}>Braze</ColItem>
               </Column>
 
               <Column>
@@ -160,6 +193,22 @@ class Work extends Component {
             <TitleGroup>
               <ColH1Title>Education</ColH1Title>
             </TitleGroup>
+
+            <ListGroup className="mobile">
+              <MobileGroup>
+                <MobileName>General Assembly</MobileName>
+                <MobileSpan>2014-2015</MobileSpan>
+              </MobileGroup>
+              <MobileGroup>
+                <MobileName>Cardiff University</MobileName>
+                <MobileSpan>2013 (study abroad)</MobileSpan>
+              </MobileGroup>
+              <MobileGroup>
+                <MobileName>Rutgers University</MobileName>
+                <MobileSpan>2010-2014</MobileSpan>
+              </MobileGroup>
+              
+            </ListGroup>
             
             <ListGroup>
               <Column>
@@ -170,7 +219,7 @@ class Work extends Component {
 
               <Column>
                 <ColItem>2014-2015</ColItem>
-                <ColItem>2013</ColItem>
+                <ColItem>2013 (study abroad)</ColItem>
                 <ColItem>2010-2014</ColItem>
               </Column>
             </ListGroup>
@@ -184,13 +233,11 @@ class Work extends Component {
             <ListGroup>
               <GithubDiv>
                 <a href="https://github.com/anniebae" target="_blank">
-                  <FaGithub />
+                  <FaGithub size={30} color='#000' />
                 </a>
               </GithubDiv>
             </ListGroup>
           </Row>
-
-
 
 
           
