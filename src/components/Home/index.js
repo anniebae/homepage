@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { Animated } from "react-animated-css";
-import PageTitle from '../PageTitle'
 
 
 export const Container = styled.div`
@@ -24,7 +23,6 @@ class Home extends Component {
   render() {
     return(
       <Container>
-        <PageTitle title="home" />
         <Link to="/about">
           <Name>
             <Animated animationIn="fadeInDown" animationOut="fadeOut" isVisible={true}>
