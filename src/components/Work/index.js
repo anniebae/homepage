@@ -102,10 +102,14 @@ const BoldTitle = styled.p`
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-
+`
+const RotateArrow = styled.div`
+  transform: rotate(-90deg);
+  display: inline-block;
+  margin: 0 0 0 .5em;
   
   @media (min-width: 767px) {
-    
+    transform: rotate(0deg);
   }
 `
 
@@ -181,7 +185,12 @@ class Work extends Component {
             
             <ListGroup>
               <Column>
-                <BoldTitle onClick={() => this.showKnowList()}>I know <FaArrowDown size={12} color='#537757' /></BoldTitle>
+                <BoldTitle onClick={() => this.showKnowList()}>
+                  I know 
+                  <RotateArrow>
+                    <FaArrowDown size={12} color='#537757' />
+                  </RotateArrow>
+                </BoldTitle>
                 <ColItemWrapper className={this.state.knowList ? 'showItem' : ''}>
                   <ColItem>Sass / LESS</ColItem>
                   <ColItem>HTML5 / CSS3</ColItem>
@@ -197,7 +206,12 @@ class Work extends Component {
               </Column>
 
               <Column>
-                <BoldTitle onClick={() => this.showUseList()}>I use <FaArrowDown size={12} color='#537757' /></BoldTitle>
+                <BoldTitle onClick={() => this.showUseList()}>
+                  I use 
+                  <RotateArrow>
+                    <FaArrowDown size={12} color='#537757' />
+                  </RotateArrow>
+                </BoldTitle>
                 <ColItemWrapper className={this.state.useList ? 'showItem' : ''}>
                   <ColItem>AJAX</ColItem>
                   <ColItem>Node.js</ColItem>

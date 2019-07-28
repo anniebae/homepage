@@ -56,14 +56,14 @@ class About extends Component {
         <Background></Background>
         <Main>
           <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-            <Copy>👋, I'm Annie - </Copy>
+            <Copy><span>👋</span>, I'm Annie - </Copy>
             <Copy>a New York City based engineer currently 💻 at <Link href="https://www.stashinvest.com/" target="_blank">Stash Invest</Link>.</Copy>
-            <Copy>I like to 🏃‍♀️ (6 half marathons, 1 Ragnar Relay), practice 🧘‍♀️, and have a weakness for anything matcha or coffee flavored.</Copy>
-            <Copy>In my free ⏰, I like to explore cool new ways to 🔨 sites & apps, take 📸, and drink an unruly amount of ☕️.</Copy>
-            <Copy>Most importantly, I'm on a mission to make my 🐱 #instafamous - so go give <Link href="https://www.instagram.com/sunnystillsleeping/" target="_blank">Sunny</Link> a follow.
+            <Copy>I like to <span>🏃‍♀️</span> (6 half marathons, 1 Ragnar Relay), practice 🧘‍♀️, and have a weakness for anything matcha or coffee flavored.</Copy>
+            <Copy>In my free <span>⏰</span>, I like to explore cool new ways to 🔨 sites & apps, take 📸, and drink an unruly amount of ☕️.</Copy>
+            <Copy>Most importantly, I'm on a mission to make my <span>🐱</span> #instafamous - so go give <Link href="https://www.instagram.com/sunnystillsleeping/" target="_blank">Sunny</Link> a follow.
             </Copy>
             <br/>
-            <Copy>Cheers, 👧</Copy>
+            <Copy>Cheers, <span>👧</span></Copy>
           </Animated>
 
 

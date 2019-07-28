@@ -27,9 +27,18 @@ const ContactBody = styled.ul`
   margin: auto;
 `
 
+const Item = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0 0 1.5em;
+`
 
-const ContactItem = styled.li`
-  margin: .5em 0;
+const IconWrap = styled.div`
+  margin-right: 1em;
+`;
+
+const ContactChannel = styled.li`
+  margin: 0;
 `
 
 const Link = styled.a`
@@ -47,18 +56,30 @@ class Contact extends Component {
 
         <ContactBody>
           <Link href="mailto:bae.annie@gmail.com?subject=Hi Annie!&body=Sent from anniebae.com">
-            <ContactItem>email</ContactItem>
+            <Item>
+              <IconWrap><FaEnvelope /></IconWrap>
+              <ContactChannel>email</ContactChannel>
+            </Item>
           </Link>
+
           <Link href="https://www.linkedin.com/in/anniebae/" target="_blank">
-            <ContactItem>linkedin</ContactItem>
+            <Item>
+              <IconWrap><FaLinkedinIn /></IconWrap>
+              <ContactChannel>linkedin</ContactChannel>
+            </Item>
           </Link>
           <Link href="https://www.instagram.com/anniebae/" target="_blank">
-            <ContactItem>instagram</ContactItem>
+            <Item>
+              <IconWrap><FaInstagram /></IconWrap>
+              <ContactChannel>instagram</ContactChannel>
+            </Item>
           </Link>
           <Link href="https://twitter.com/bae_annie" target="_blank">
-            <ContactItem>twitter</ContactItem>
+            <Item>
+              <IconWrap><FaTwitter /></IconWrap>
+              <ContactChannel>twitter</ContactChannel>
+            </Item>
           </Link>
-            
         </ContactBody>
       </Container>
     )
